@@ -1,0 +1,332 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  position: relative;
+  overflow: hidden;
+}
+#page {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f1f1;
+}
+#page1 {
+  height: 100vh;
+  width: 100vw;
+}
+#page2 {
+  height: 100vh;
+  width: 100vw;
+}
+#page3 {
+  height: 100vh;
+  width: 100vw;
+}
+canvas {
+  position: relative;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 9;
+}
+#loop {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  height: 30%;
+  width: 100%;
+  font-size: 70px;
+  white-space: nowrap;
+  font-family: gilroy;
+}
+
+#loop > h1 {
+  font-weight: 400;
+  animation-name: anim;
+  animation-duration: 15s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  color: #000;
+}
+#loop > h1 > span {
+  -webkit-text-stroke: 1.2px black;
+  color: transparent;
+}
+
+@keyframes anim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  padding: 0px 30px;
+}
+
+#nav > h1 {
+  font-family: gilroy;
+  font-weight: 50;
+  color: #f1f1f1;
+  font-size: 15px;
+  background-color: #000;
+  border-radius: 50px;
+  padding: 10px 10px;
+}
+
+#nav > button {
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #000;
+  border: none;
+  color: #f1f1f1;
+}
+#page1 > h3 {
+  position: absolute;
+  top: 40%;
+  font-family: gilroy;
+  font-weight: 400;
+  color: #434141;
+  left: 5%;
+}
+
+#page1 > img {
+  position: absolute;
+  top: 55%;
+  left: 16%;
+  height: 100px;
+  width: 100px;
+}
+
+#page > h3 {
+  position: absolute;
+  top: 60%;
+  right: 15%;
+  font-family: gilroy;
+  font-weight: 400;
+  color: #434141;
+}
+#page1 > h2 {
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  font-family: gilroy;
+  font-weight: 400;
+}
+#page2 > h1 {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-family: gilroy;
+  font-weight: 400;
+  font-size: 100px;
+  color: #434141;
+}
+/* #page2 #skills > img { */
+position: absolute;
+top: 55%;
+right: 16%;
+height: 100px;
+width: 100px;
+/* } */
+#page2 #skills img {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+#page2 #skills #illus {
+  position: absolute;
+  top: 40%;
+  right: 30%;
+  height: 100px;
+  width: 100px;
+}
+#page2 #skills #prem {
+  position: absolute;
+  top: 40%;
+  right: 23%;
+  height: 100px;
+  width: 100px;
+}
+#page2 #skills #can {
+  position: absolute;
+  top: 40%;
+  right: 15%;
+  height: 100px;
+  width: 100px;
+}
+#page2 #skills #fig {
+  position: absolute;
+  top: 40%;
+  right: 8%;
+  height: 100px;
+  width: 100px;
+}
+#page2 #skills #shop {
+  position: absolute;
+  top: 40%;
+  right: 1%;
+  height: 100px;
+  width: 100px;
+}
+/* new floating code */
+/* Floating animation for logos */
+/* Base state - hidden */
+/* Base state - hidden */
+/* Floating animation for logos */
+#page2 #skills img {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+#page2 #skills img.float-active {
+  opacity: 1;
+  animation: floatUpDown 3s ease-in-out infinite;
+}
+
+#page2 #skills #illus.float-active {
+  animation-delay: 0s;
+  transition-delay: 0.1s;
+}
+#page2 #skills #prem.float-active {
+  animation-delay: 0.3s;
+  transition-delay: 0.2s;
+}
+#page2 #skills #can.float-active {
+  animation-delay: 0.6s;
+  transition-delay: 0.3s;
+}
+#page2 #skills #fig.float-active {
+  animation-delay: 0.9s;
+  transition-delay: 0.4s;
+}
+#page2 #skills #shop.float-active {
+  animation-delay: 1.2s;
+  transition-delay: 0.5s;
+}
+
+@keyframes floatUpDown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+#page3 > h2 {
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  font-family: gilroy;
+  font-weight: 400;
+  font-size: 50px;
+  color: #000;
+}
+#page3 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  overflow: hidden;
+}
+
+#page3 > h1 {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  font-family: gilroy;
+  font-size: 80px;
+  font-weight: 400;
+  color: #000;
+}
+
+#page3 {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#page3 > h1 {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  font-family: gilroy;
+  font-size: 80px;
+  font-weight: 400;
+  color: #000;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  will-change: transform;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.marquee-track img {
+  height: 500px;
+  width: 750px;
+  object-fit: cover; /* Fills the box completely */
+  object-position: center; /* Centers the image */
+  border-radius: 16px;
+  flex-shrink: 0; /* Prevents shrinking */
+  min-width: 750px; /* Forces minimum width */
+  max-width: 750px; /* Forces maximum width */
+  min-height: 500px; /* Forces minimum height */
+  max-height: 500px; /* Forces maximum height */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+  transform: translateZ(0);
+}
+
+.marquee-track img:hover {
+  transform: scale(1.05);
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
